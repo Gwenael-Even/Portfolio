@@ -1,0 +1,97 @@
+.hamburgerContainer {
+    position:absolute;
+    top:5%;
+    right:10%;
+    align-self: flex-end;
+    width:40px;
+    height:32px;
+    cursor:pointer;
+
+    & span {
+        display:block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        border-radius:3px;
+        background-color:#c0dfd9;
+        z-index:2;
+        opacity:0.7;
+        transition-timing-function: ease;
+        transition-duration: .15s;
+        transition-property:transform, opacity, background-color;
+    }
+
+    & :nth-child(1).open {
+        bottom:-10px;
+        transform:rotate(-45deg);
+        background-color:#b3c2bf;
+    }
+    & :nth-child(2).open {
+        transform: translate3d(-10,-10px,0);
+        opacity: 0;
+    }
+    & :nth-child(3).open {
+        top:-8px;
+        transform:rotate(-135deg);
+        background-color:#3b3a36;
+    }
+}
+
+.navBarMenu {
+    position:absolute;
+    top:0;
+    right:0;
+    height:100vh;
+    width:35vw;
+    margin-right:-35vw;
+    background-color:#e9ece5;
+    transition: margin-right 0.5s ease-in-out
+}
+
+.navBarActive {
+    margin-right:0;
+}
+
+.navBarLink {
+    position:relative;
+    height:100%;
+    display:flex;
+    & ul {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-around;
+        height:100%;
+        width:100%;
+        list-style-type: none;
+    }
+
+    & li {
+    }
+
+    & a {
+        text-decoration:none;
+        color:#3b3a36;
+        transition: color 0.5s ease;
+        letter-spacing:0.15em;
+        &::after {
+            background: none repeat scroll 0 0 transparent;
+            content:"";
+            display:block;
+            height:2px;
+            background:#3b3a36;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width:0;
+        }
+
+        &:hover:after {
+            width:100%;
+            left:0;
+        }
+
+        &:hover {
+            color:#3b3a36;
+        }
+    }
+}
