@@ -1,7 +1,8 @@
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./Fonts/OpenSans-Regular.ttf") format("ttf");
- }
+
+@import './import/colors';
+@import './import/font';
+@import 'navMenu';
+@import 'home';
 
 * {
   margin:0;
@@ -9,8 +10,8 @@
 }
 
 body {
-  background-color:#232323 !important;
-  font-family: 'Open Sans', sans-serif !important;
+  background-color:$defaultColor !important;
+  font-family: $defaultFontFamily;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height:100vh !important;
@@ -31,4 +32,71 @@ code {
 
 .noMargin {
   margin:0 !important;
+}
+
+a, a:visited, a:hover {
+  text-decoration:none !important;
+  color:$white !important;
+}
+
+button {
+  position:relative;
+  border:1px solid$red;;
+  display: inline-block;
+  width:271px;
+  height:44px;
+  color:$white;
+  font-size:20px !important;
+  text-align:center;
+  transition: all 0.5s;
+  z-index:1;
+  overflow:hidden;
+  background-color:transparent;
+  border-radius:12px !important;
+  &:after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:$defaultColor;
+    z-index:-2;
+    border-radius:12px !important;
+  }
+  &:before {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0%;
+    height:100%;
+    background-color:$red;
+    transition: all 0.3s;
+    border-radius:12px !important;
+    z-index:-1;
+  }
+
+  &:hover {
+    color:$white;
+    &:before{
+      width:100%;
+    }
+    svg {
+      transform:rotate(90deg);
+      color:$defaultColor;
+    }
+  }
+
+  &:active, &:focus {
+    outline:0 !important;
+
+  }
+
+  svg {
+    position:absolute;
+    right:5%;
+    top:25%;
+    transition: 0.5s all;
+  }
 }

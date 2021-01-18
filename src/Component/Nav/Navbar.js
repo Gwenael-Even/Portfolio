@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../Css/navMenu.scss'
 import { Col } from 'react-bootstrap'
 
 function Navbar (props) {
@@ -8,9 +7,10 @@ function Navbar (props) {
             <div className={`navBarMenu ${props.active ? 'navBarActive' : ''}`}>
                 <div className={'navBarLink'}>
                     <ul>
-                        <li className={'liNavbar'}><a href='#'>Ici</a></li>
-                        <li className={'liNavbar'}><a href='#'>Parcours</a></li>
-                        <li className={'liNavbar'}><a href='#'>Projets</a></li>
+                        <li className={'liNavbar'}><a href='#'>Accueil</a></li>
+                        <li className={'liNavbar'}><a href='#'>A propos</a></li>
+                        <li className={'liNavbar'}><a href='#'>Mon parcours</a></li>
+                        <li className={'liNavbar'}><a href='#'>Mes projets</a></li>
                         <li className={'liNavbar'}><a href='#'>Me contacter</a></li>
                     </ul>
                 </div>

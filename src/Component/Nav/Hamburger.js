@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../../Css/navMenu.scss'
 import NavBar from './Navbar'
 
 function Hamburger () {
