@@ -3,6 +3,7 @@
 @import './import/font';
 @import 'navMenu';
 @import 'home';
+@import 'about';
 
 * {
   margin:0;
@@ -26,6 +27,13 @@ code {
     monospace;
 }
 
+.maxSize {
+  height:100vh;
+  width:100vw;
+  margin:0;
+  padding:0;
+}
+
 .noPadding {
   padding: 0 !important;
 }
@@ -34,9 +42,20 @@ code {
   margin:0 !important;
 }
 
-a, a:visited, a:hover {
+
+a, a:visited {
   text-decoration:none !important;
-  color:$white !important;
+  color:$white;
+
+  &:hover {
+    color:$white !important;
+  }
+}
+
+.centerComponent {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 button {
@@ -99,4 +118,8 @@ button {
     top:25%;
     transition: 0.3s all;
   }
+}
+
+.hoverLink:hover {
+  text-decoration:underline;
 }
