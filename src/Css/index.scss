@@ -53,6 +53,7 @@ button {
   overflow:hidden;
   background-color:transparent;
   border-radius:12px !important;
+
   &:after {
     content:'';
     position:absolute;
@@ -84,7 +85,6 @@ button {
     }
     svg {
       transform:rotate(90deg);
-      color:$defaultColor;
     }
   }
 
@@ -97,6 +97,6 @@ button {
     position:absolute;
     right:5%;
     top:25%;
-    transition: 0.5s all;
+    transition: 0.3s all;
   }
 }

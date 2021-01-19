@@ -68,20 +68,22 @@
     }
 
     & a {
+        display:block;
         text-decoration:none;
         color:$white;
         letter-spacing:0.15em;
         transition: 0.3s all ease-in-out;
+        width:193px;
+        height:44px;
+        text-align:center;
+        line-height:44px;
         &:hover {
             display:block;
             content:"";
-            height:44px;
-            width:193px;
             background-color:$red;
             border-radius:3px;
             box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
             text-align:center;
-            line-height:44px;
         }
        /* &::after {
             background: none repeat scroll 0 0 transparent;
