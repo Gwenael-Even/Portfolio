@@ -1,11 +1,12 @@
 .hamburgerContainer {
-    position:absolute;
+    position:fixed;
     top:5%;
     right:10%;
     align-self: flex-end;
     width:40px;
     height:32px;
     cursor:pointer;
+    z-index:2;
 
     & span {
         display:block;
@@ -37,7 +38,8 @@
 }
 
 .navBarMenu {
-    position:absolute;
+    position:fixed;
+    overflow:hidden;
     top:0;
     right:0;
     height:100vh;
@@ -49,8 +51,13 @@
 }
 
 .navBarActive {
+    overflow:hidden;
     opacity:100%;
     z-index:1;
+}
+
+.navBarActive ~ body {
+    overflow:hidden;
 }
 
 .navBarLink {
