@@ -1,5 +1,5 @@
 
-.landingPage {
+.home {
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -8,7 +8,7 @@
     width:100vw;
 }
 
-
-p, span {
+.home > p, span {
     font-size:25px;
+    margin-bottom:20px;
   }

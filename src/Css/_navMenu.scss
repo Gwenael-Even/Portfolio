@@ -47,7 +47,7 @@
     opacity:0;
     z-index:-1;
     background-color:$defaultColor;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-out ;
 }
 
 .navBarActive {
