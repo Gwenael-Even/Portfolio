@@ -9,16 +9,16 @@ function App() {
   return (
     <>
       <div className={'noPadding noMargin'}>
-        <div className={'maxSize centerComponent'}>
+        <section className={'maxSize centerComponent'}>
           <Home />
-        </div>
-        <div className={'maxSize centerComponent'}>
+        </section>
+        <section className={'maxSize centerComponent'}>
           <About />
-        </div>
-        <div className={'maxSize centerComponent'}>
-        <Work />
-      </div>
-        <Hamburger />
+        </section>
+        <section className={'maxSize centerComponent'}>
+          <Work />
+        </section>
+          <Hamburger />
       </div>
     </>
   )
