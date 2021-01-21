@@ -1,0 +1,98 @@
+.work {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+    height:100vh;
+    width:100vw;
+}
+
+.work > h1 {
+    color:$yellow;
+}
+
+.timelineButtons {
+    width:90%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
+.timeline {
+    width:80%;
+    height:70%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    background-color:$darkBlue;
+    border-left: 8px solid $red;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    list-style-type:none;
+}
+
+.lineTimeline {
+    display:block;
+    background-color:$red;
+    height:535px;
+    width:3px;
+}
+
+.circleTimeline {
+    position: relative;
+    background: $red;    
+    border-radius: 50%;  
+    height: 26px;
+    width: 26px;
+    min-height:26px;
+    min-width:26px;
+    left:-17px;
+    &:after {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      background: $defaultColor;    
+      border-radius: 50%;  
+      height:13px;
+      width: 13px;
+      content: "";
+    }
+  }
+
+.timeline > li {
+    display:flex;
+    flex-direction:row;
+    margin-right:5%;
+}
+
+.timeline > first-child {
+    margin-top:5%;
+}
+
+.timeline > last-child {
+    margin-bottom:5%;
+}
+
+.timelineText > h2 {
+    color: $red;
+    font-size:$mobileMediumFont;
+    letter-spacing:5px;
+}
+
+.timelineText > h3 {
+    font-size:$mobileSmallFont;
+    color:$white;
+}
+
+.timelineDescription {
+    color: $white;
+    font-size:$mobileVerySmallFont;
+}
+
+@media screen and (max-width: 361px) {
+    .timelineText > h2{
+        letter-spacing: 0px;;
+        font-size:$mobileVerySmallFont;
+    }
+}

@@ -8,7 +8,7 @@
     width:100vw;
 }
 
-.home > p, span {
-    font-size:25px;
+.home > p, p > span {
+    font-size:$mobileMediumFont;
     margin-bottom:20px;
   }

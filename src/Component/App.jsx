@@ -3,6 +3,7 @@ import '../Css/index.scss'
 import Hamburger from './Nav/Hamburger'
 import Home from './Home/Home'
 import About from './About/About'
+import Work from './Work/Work'
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <div className={'maxSize centerComponent'}>
           <About />
         </div>
+        <div className={'maxSize centerComponent'}>
+        <Work />
+      </div>
         <Hamburger />
       </div>
     </>

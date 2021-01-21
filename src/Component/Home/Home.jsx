@@ -11,7 +11,7 @@ function Home () {
                 <p>Je suis</p>
                 <p><span>Développeur web</span>.</p>
                 <p>Bienvenue !</p>
-                <button><a href='#about'>Découvrez moi<FaArrowRight/></a></button>
+                <a href='#about' className={'btn'}>Découvrez moi<FaArrowRight/></a>
             </div>
         </>
     )

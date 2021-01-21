@@ -19,7 +19,7 @@ function About () {
                     </p>
                     <p className='aboutContact'>
                         Envie de travailler avec moi ?
-                        Contactez moi par <a href='#' className={'yellow'}>mail</a> ou sur <a href={linkedin} className={'yellow'}>LinkedIn</a>
+                        Contactez moi par <a href='#contact' className={'yellow'}>mail</a> ou sur <a href={linkedin} className={'yellow'}>LinkedIn</a>
                     </p>
             </div>
         </div>
