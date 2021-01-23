@@ -1,11 +1,13 @@
 
 @import './import/colors';
 @import './import/font';
+@import './import/mixin';
 @import './import/button';
 @import 'navMenu';
 @import 'home';
 @import 'about';
 @import 'work';
+@import 'projects';
 
 * {
   margin:0;
@@ -68,6 +70,7 @@ a, a:visited {
 
 h1 {
   position:relative;
+  color:$yellow;
 
   &::after {
     content:'';

@@ -20,7 +20,7 @@ function Navbar (props) {
         },
         {
             id:4,
-            href: '#project',
+            href: '#projects',
             text: 'Mes projets',
         },
         {

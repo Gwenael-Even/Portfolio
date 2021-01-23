@@ -4,6 +4,7 @@ import Hamburger from './Nav/Hamburger'
 import Home from './Home/Home'
 import About from './About/About'
 import Work from './Work/Work'
+import Projects from './Projects/Projects'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <Work />
         </section>
           <Hamburger />
+        <section className={'maxSize centerComponent'}>
+          <Projects />
+        </section>
       </div>
     </>
   )
