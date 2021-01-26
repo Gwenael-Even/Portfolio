@@ -14,15 +14,18 @@ function Footer () {
 
     return (
         <>
-        <div className={'socialMediaContainer'}>
-            <div className={'socialMediaSquare'}>
-                <a href={linkedinUrl}><RiLinkedinFill className={'icon'} /></a>
+        <div className={'diagonal'} />
+        <div className={'contactContainer'}>
+            <div className={'socialMediaContainer'}>
+                <div className={'socialMediaSquare'}>
+                    <a href={linkedinUrl}><RiLinkedinFill className={'icon'} /></a>
+                </div>
+                <div className={'socialMediaSquare'}>
+                    <a href={githubUrl}><AiFillGithub className={'icon'} /></a>
+                </div>
             </div>
-            <div className={'socialMediaSquare'}>
-                <a href={githubUrl}><AiFillGithub className={'icon'} /></a>
-            </div>
+            <span>Gwenaël Even - {getCurrentYear()} </span>
         </div>
-        <span>Gwenaël Even - {getCurrentYear()} </span>
         </>
     )
 }

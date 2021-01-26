@@ -1,34 +1,31 @@
 
 .footer {
-   height:20vh;
+   height:30vh;
    width:100vw;
-   position:relative;
    display:flex;
    flex-direction:column;
    align-items:center;
    justify-content: space-around;
-   &:before {
-       content:'';
-       position:absolute;
-       top:0;
-       left:0;
-       right:0;
-       bottom:0;
-       transform:skewY(-11deg);
-       background-color:$cyan;
-   }
+   background-color:$cyan;
 
-   &:after {
-       content:'';
-       position:absolute;
-       top:50%;
-       left:0;
-       right:0;
-       bottom:-27%;
-       background-color:$cyan;
-   }
+  
+}
 
-   > span {
+.diagonal {
+    width:100%;
+    height:10vh;
+    background-color:$cyan;
+    transform:skewY(-11deg);
+}
+
+.contactContainer {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    > span {
         z-index:1;
         color:$defaultColor;
         text-align:center;
@@ -36,13 +33,8 @@
 }
 
 .socialMediaContainer {
-    z-index:1;
-    width:100%;
-    height:100%;
     display:flex;
     flex-direction:row;
-    align-items:center;
-    justify-content:center ;
 }
 
 .socialMediaSquare {
