@@ -6,7 +6,6 @@ function About () {
 
     return (
         <>
-        <div className={'about'} id='about'>
             <h1>Qui-suis-je ?</h1>
             <div className={'picShadow'}>
                 <div className={'pic'} />
@@ -22,7 +21,6 @@ function About () {
                         Contactez moi par <a href='#contact' className={'yellow'}>mail</a> ou sur <a href={linkedin} className={'yellow'}>LinkedIn</a>
                     </p>
             </div>
-        </div>
         </>
     )
 }

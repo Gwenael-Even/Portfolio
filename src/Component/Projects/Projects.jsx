@@ -23,26 +23,24 @@ function Projects () {
 
     return (
         <>
-            <div className={'projects'} id='projects'>
-                <h1>Mes projets</h1>
-                <div className={'projectsContainer'}>
-                    {
-                        projects.map((project) => {
-                            return (
-                            <div className={'project'}>
-                                 <div className={'projectOverlay'}>
-                                    <div className={'projectTitle'}>
-                                        <h3>{project.title}</h3>
-                                        <span>{project.tech}</span>
-                                    </div>
-                                <button href='#' className={'btn btnProject'}>Voir plus</button>
+            <h1>Mes projets</h1>
+            <div className={'projectsContainer'}>
+                {
+                    projects.map((project) => {
+                        return (
+                        <div className={'project'} key={project.id}>
+                                <div className={'projectOverlay'}>
+                                <div className={'projectTitle'}>
+                                    <h3>{project.title}</h3>
+                                    <span>{project.tech}</span>
                                 </div>
-                                <img src={project.img} alt={project.alt} />
+                            <button href='#' className={'btn btnProject'}>Voir plus</button>
                             </div>
-                            )
-                        })
-                    }
-                </div>
+                            <img src={project.img} alt={project.alt} />
+                        </div>
+                        )
+                    })
+                }
             </div>
         </>
     )

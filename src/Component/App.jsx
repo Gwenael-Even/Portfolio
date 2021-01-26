@@ -5,24 +5,32 @@ import Home from './Home/Home'
 import About from './About/About'
 import Work from './Work/Work'
 import Projects from './Projects/Projects'
+import Contact from './Contact/Contact'
+import Footer from './Footer/Footer'
 
 function App() {
   return (
     <>
       <div className={'noPadding noMargin'}>
-        <section className={'maxSize centerComponent'}>
+        <section className={'home'} id={'home'}>
           <Home />
         </section>
-        <section className={'maxSize centerComponent'}>
+        <section className={'about'} id={'about'}>
           <About />
         </section>
-        <section className={'maxSize centerComponent'}>
+        <section className={'work'} id={'work'}>
           <Work />
         </section>
-          <Hamburger />
-        <section className={'maxSize centerComponent'}>
+        <section className={'projects'} id={'projects'}>
           <Projects />
         </section>
+        <section className={'contact'} id={'contact'}>
+          <Contact />
+        </section>
+        <section className={'footer'} id={'footer'}>
+          <Footer />
+        </section>
+        <Hamburger />
       </div>
     </>
   )

@@ -1,0 +1,125 @@
+.contact {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+    height:100vh;
+    width:100vw;
+    
+    &:before {
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:$red;
+        transform:skewY(-11deg);
+    }
+}
+
+.formContact {
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+    width:300px;
+    height:80%;
+    text-align:center;
+    background-color: $defaultColor;
+    border-radius:6px;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0, 0.25);
+    > h2 {
+        display:block;
+        width:90%;
+        text-align:center;
+        font-size:$mobileMediumFont;
+        margin-top:5%;
+        color:$white;
+    }
+}
+
+.formContact > div {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    margin-left:10%;
+    position:relative;
+    > label {
+        color:$white;
+        align-items:left;
+        top:-25px;
+        left:10px;
+        position:absolute;
+        opacity: 0.3s;
+        text-align:left;
+    }
+}
+
+input.btn {
+    width:243px;
+}
+
+form > div {
+
+    > input {
+        height:50px;
+    }
+
+    > textarea {
+        height:113px;
+    }
+    
+    > input[type="text"],
+    > input[type="email"],
+    textarea {
+        border:none;
+        color:$white;
+        background-color:$darkBlue;
+        border-radius:12px;
+        line-height:31px;
+        z-index:1;
+        width: calc(90% - 10px);
+        font-size:$mobileSmallFont;
+        padding-left:10px;
+        transition: all 0.3s fade-in;
+    
+        &:invalid:focus:not(:placeholder-shown) {
+            // Show the more robust requirement instructions below.
+            & ~ .requirements {
+              max-height: 200px;
+              padding: 0 30px 20px 50px;
+            }
+          }
+    
+        &:focus {
+            & + label {
+                opacity:0;
+            }
+        }
+    
+    
+        &:valid {
+    
+            & + label {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+input:not(:placeholder-shown) {
+
+}
+
+.requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+  }

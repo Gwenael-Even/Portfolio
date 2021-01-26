@@ -56,31 +56,28 @@ function Work () {
 
     return (
         <>
-            <div className={'work'} id='work'>
-                <h1>Mon parcours</h1>
-                <div className={'timelineButtons'}>
-                    <button onClick={()=> setSelected(true)} className={selected ?'btnLink' : 'btnLink btnUnselect'}>Etudes</button>
-                    <button onClick={()=> setSelected(false)} className={!selected ?'btnLink' : 'btnLink btnUnselect'}>Parcours pro</button>
-                </div>
-                <ul className={'timeline'}>
-                    {
-                        isSelected.map((timeline) => {
-                            return (
-                            <li key={timeline.id}>
-                                <div className={'circleTimeline'} />
-                                <div className={'timelineText'}>
-                                    <h2 className={'timelineDate'}>{timeline.date}</h2>
-                                    <h3 className={'timelineTitle'}>{timeline.title}</h3>
-                                    <p className={'timelineDescription'}>{timeline.description}</p>
-                                </div>
-                            </li>
-                            )   
-                        })
-                    }
-                </ul>
-            <a href='#about' className={'btn btn-small'}>Télécharger mon CV</a>
-
+            <h1>Mon parcours</h1>
+            <div className={'timelineButtons'}>
+                <button onClick={()=> setSelected(true)} className={selected ?'btnLink' : 'btnLink btnUnselect'}>Etudes</button>
+                <button onClick={()=> setSelected(false)} className={!selected ?'btnLink' : 'btnLink btnUnselect'}>Parcours pro</button>
             </div>
+            <ul className={'timeline'}>
+                {
+                    isSelected.map((timeline) => {
+                        return (
+                        <li key={timeline.id}>
+                            <div className={'circleTimeline'} />
+                            <div className={'timelineText'}>
+                                <h2 className={'timelineDate'}>{timeline.date}</h2>
+                                <h3 className={'timelineTitle'}>{timeline.title}</h3>
+                                <p className={'timelineDescription'}>{timeline.description}</p>
+                            </div>
+                        </li>
+                        )   
+                    })
+                }
+            </ul>
+            <a href='#about' className={'btn btn-small'}>Télécharger mon CV</a>
         </>
     )
 }
