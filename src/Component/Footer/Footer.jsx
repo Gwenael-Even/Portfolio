@@ -15,7 +15,7 @@ function Footer () {
     return (
         <>
         <div className={'diagonal'} />
-        <div className={'contactContainer'}>
+        <div className={'footerContainer'}>
             <div className={'socialMediaContainer'}>
                 <div className={'socialMediaSquare'}>
                     <a href={linkedinUrl}><RiLinkedinFill className={'icon'} /></a>

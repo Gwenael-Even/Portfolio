@@ -34,6 +34,7 @@ function loop() {
         }
 
     bar.current.style.width = indicatorMult + '%'
+
     if (bar.current.style.width > '0%') {
         bar.current.style.backgroundColor = backgroundColor
     }

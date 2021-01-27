@@ -1,14 +1,13 @@
 
 .footer {
+    position:relative;
    height:30vh;
    width:100vw;
    display:flex;
    flex-direction:column;
    align-items:center;
    justify-content: space-around;
-   background-color:$cyan;
-
-  
+    background-color:$cyan;
 }
 
 .diagonal {
@@ -18,7 +17,7 @@
     transform:skewY(-11deg);
 }
 
-.contactContainer {
+.footerContainer {
     width:100%;
     height:100%;
     display:flex;
@@ -26,7 +25,6 @@
     align-items:center;
     justify-content:space-evenly;
     > span {
-        z-index:1;
         color:$defaultColor;
         text-align:center;
    }
