@@ -1,10 +1,12 @@
 import React  from 'react'
 import { FaArrowRight } from 'react-icons/fa'
+import LerpBar from '../Scroll/LerpBar'
  
 function Home () {
 
     return (
         <>
+            <LerpBar />
             <p>Bonjour, je suis</p>
             <p><span>Gwenaël Even</span>.</p>
             <p>Je suis</p>

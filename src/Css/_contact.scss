@@ -6,6 +6,7 @@
     align-items:center;
     height:100vh;
     width:100vw;
+    z-index:1;
     
     &:before {
         content:'';
@@ -14,13 +15,13 @@
         left:0;
         right:0;
         bottom:0;
-        background:$red;
+        background:linear-gradient($defaultColor 0% 10%, $red 10% 100%);
         transform:skewY(-11deg);
+        z-index:-1;
     }
 }
 
 .formContact {
-    z-index:1;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -80,7 +81,6 @@ form > div {
         background-color:$darkBlue;
         border-radius:12px;
         line-height:31px;
-        z-index:1;
         width: calc(90% - 10px);
         font-size:$mobileSmallFont;
         padding-left:10px;
