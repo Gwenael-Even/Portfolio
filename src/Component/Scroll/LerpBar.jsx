@@ -8,7 +8,7 @@ let scrollOffset = 0;
 let scrollPercent = 0;
 let indicatorPosition = scrollPercent;
 let backgroundColor
-const colors = ['#D95D6A', '#FFE868', '#11CE8A', '#537AD9']
+const colors = ['#8CCBD0', '#CEDB4F', '#FEF07A', '#F9AE48', '#EE7C6C']
 
 
 function resize() {
@@ -22,22 +22,24 @@ function loop() {
     scrollPercent = scrollOffset/scrollHeight || 0;
     indicatorPosition += (scrollPercent-indicatorPosition)*0.05;
     const indicatorMult = indicatorPosition*100
-    
-        if (indicatorMult <= 20) {
-            backgroundColor = colors[0]
-        } else if (indicatorMult <= 40) {
-            backgroundColor = colors[1]
-        } else if (indicatorMult <= 60) {
-            backgroundColor = colors[2]
-        } else if (indicatorMult <= 80) {
-            backgroundColor = colors[3]
-        }
+
+    if (indicatorMult <= 20) {
+        backgroundColor = colors[0]
+    } else if (indicatorMult <= 40) {
+        backgroundColor = colors[1]
+    } else if (indicatorMult <= 60) {
+        backgroundColor = colors[2]
+    } else if (indicatorMult <= 80) {
+        backgroundColor = colors[3]
+    } else if (indicatorMult <= 100) {
+        backgroundColor = colors[4]
+    }
 
     bar.current.style.width = indicatorMult + '%'
 
-    if (bar.current.style.width > '0%') {
+    console.log('bar.current.style.width :', bar.current.style.width)
+
         bar.current.style.backgroundColor = backgroundColor
-    }
     requestAnimationFrame(loop);
   }
 
