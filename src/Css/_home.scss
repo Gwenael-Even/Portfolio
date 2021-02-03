@@ -2,27 +2,88 @@
 .home {
     display:flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items:center;
     height:100vh;
     width:100vw;
     position:relative;
 }
 
-.home > p, p > span {
-    font-size:$mobileMediumFont;
-    margin-bottom:20px;
-  }
+.textContainer {
+    color:transparent;
+    height:50%;
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}
 
-.scroll-indicator {
-    z-index:2;
+.home > div > * {
+    font-size:$mobileMediumFont; 
+    display:inline-block;
+}
+
+.textContainer p, .textContainer p > span {
+    text-align:left;
+    font-family:monospace !important;
+}
+
+.textContainer > div p {
+    display:inline-block;
+    text-align:left;
+    overflow:hidden;
+    white-space: nowrap;
     width:100%;
-    height:6px;
-    position:fixed;
-    left:0;
+    opacity:0;
+    height:100%;
+}
+
+.textAnim1 {
+    border-right: 2px solid $red;
+    animation: 
+    typing 2.5s steps(40, end), blink .5s step-end infinite alternate;
+    animation-fill-mode:forwards;
+    border-right:3px solid $red;
+    & > span {
+        color:$red;
+    }
+}
+
+.textAnim2 {
+    animation: 
+    typing 2.5s steps(40, end), blink .5s step-end infinite alternate;
+    animation-fill-mode:forwards;
+    background-color:$white;
+    animation-delay: 3s;
+}
+
+.textAnim3 {
+    animation: 
+    typing 2.5s steps(40, end), blink .5s step-end infinite alternate;
+    animation-fill-mode:forwards;
+    animation-delay: 6s;
+
+    & > span {
+        color:green;
+    }
+}
+
+.textAnim4 {
+    animation: 
+    typing 2.5s steps(40, end), blink .5s step-end infinite alternate;
+    animation-fill-mode:forwards;
+    animation-delay: 8s;
+}
+
+.home > .btn {
+    opacity:0;
+    animation: opacity 1s ease-in;
+    animation-delay:9s;
+    animation-fill-mode:forwards;
 }
 
 .bar {
+    z-index:2;
     transform:translateZ(0);
     height:6px;
     background:$white;
@@ -35,4 +96,46 @@
     height:40px;
     width:3px;
     background:$white;
+}
+
+
+
+@media screen and (orientation:landscape) {
+
+    .textContainer > *:not(a) {
+        font-size:$mobileMediumFont;
+        margin:10px;
+    }
+
+    .textContainer > div {
+        display:flex;
+        flex-direction:row;
+    }
+
+    .textContainer > a {
+        font-size:$mobileVerySmallFont;
+    }
+}
+
+
+@media screen and (min-width: $minWidthTablet ) {
+    .home {
+        font-size:$mobileMediumFont;
+      }
+
+    .home > .btn {
+        margin-bottom:30px;
+    }
+}
+
+@media screen and (min-width: $minWidthLandScapeTablette ) {
+    
+    .about > h1 {
+        font-size:$tabletH1;
+    }
+    
+    .textContainer {
+        font-size:$tabletMediumFont;
+    }
+
 }

@@ -1,15 +1,28 @@
-
 .about {
+    height:100vh;
+    width:100vw;
     display:flex;
     flex-direction:column;
     justify-content: space-evenly;
     align-items:center;
-    height:100vh;
-    width:100vw;
 }
 
-.about > h1 {
-    color:$yellow;
+.aboutContainer {
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.fadeIn {
+    opacity:1 !important;
+}
+
+.picContainer {
+    opacity:0;
+    margin-top:10%;
+    transition: opacity 2s linear;
 }
 
 .picShadow {
@@ -24,7 +37,7 @@
     margin-top:10%;
     height:128px;
     width:128px;
-    background-image: url('../Assets/images/picture_Gwenael.png');
+    background-image: url('../Assets/images/picture_Gwenael_phone.png');
     background-repeat:no-repeat;
 }
 
@@ -38,14 +51,49 @@ img {
     justify-content: space-evenly;
     align-items:center;
     text-align:center;
-    height:308px;
+    width:90%;
+    height:80%;
 }
 
-.textAbout > p, span {
+.textAbout > * {
     font-size:$mobileMediumFont;
-    width:90%;
+}
+
+.textAbout > p > span {
+    color: $red;
 }
 
 .aboutContact {
-    font-size:$mobileSmallFont !important;
+    font-size:$mobileSmallFont;
+}
+
+@media screen and (orientation:landscape) {
+
+    .picContainer {
+        margin-top:0;
+        margin-bottom:10%;
+    }
+
+    .aboutContainer {
+        flex-direction:row;
+    }
+    .textAbout {
+        font-size:$mobileSmallFont;
+        width:50%;
+    }
+}
+
+@media screen and (min-width: $minWidthLandScapeTablette ) {
+    .textAbout {
+        font-size:$mobileBigFont;
+    }
+
+    .picShadow {
+        height:180px;
+    }
+    .pic {
+        height:160px;
+        width:160px;
+        background-image: url('../Assets/images/picture_Gwenael_tablet.png');
+    }
 }

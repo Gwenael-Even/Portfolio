@@ -9,25 +9,26 @@ import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
 
 function App() {
+
   return (
     <>
       <div className={'noPadding noMargin'}>
-        <section className={'home'} id={'home'}>
+        <section className={'home'} title={'home'}>
           <Home />
         </section>
-        <section className={'about'} id={'about'}>
+        <section className={'about'} title={'about'}>
           <About />
         </section>
-        <section className={'work'} id={'work'}>
+        <section className={'work'} title={'work'}>
           <Work />
         </section>
-        <section className={'projects'} id={'projects'}>
+        <section className={'projects'} title={'projects'}>
           <Projects />
         </section>
-        <section className={'contact'} id={'contact'}>
+        <section className={'contact'} title={'contact'}>
           <Contact />
         </section>
-        <section className={'footer'} id={'footer'}>
+        <section className={'footer'} >
           <Footer />
         </section>
         <Hamburger />

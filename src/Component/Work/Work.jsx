@@ -77,7 +77,6 @@ function Work () {
                     })
                 }
             </ul>
-            <a href='#about' className={'btn btn-small'}>Télécharger mon CV</a>
         </>
     )
 }

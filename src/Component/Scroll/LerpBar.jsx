@@ -8,7 +8,7 @@ let scrollOffset = 0;
 let scrollPercent = 0;
 let indicatorPosition = scrollPercent;
 let backgroundColor
-const colors = ['#8CCBD0', '#CEDB4F', '#FEF07A', '#F9AE48', '#EE7C6C']
+const colors = ['#EA787B', '#BB71E4', '#5FC7E4', '#8FEA9C', '#F7EA8C']
 
 
 function resize() {
@@ -18,9 +18,11 @@ function resize() {
 
 
 function loop() {
+
+    //(window.scrollY + window.innerHeight) / document.body.innerHeight
     scrollOffset = window.pageYOffset || window.scrollTop;
     scrollPercent = scrollOffset/scrollHeight || 0;
-    indicatorPosition += (scrollPercent-indicatorPosition)*0.05;
+    indicatorPosition += (scrollPercent-indicatorPosition) *0.05;
     const indicatorMult = indicatorPosition*100
 
     if (indicatorMult <= 20) {
@@ -37,9 +39,7 @@ function loop() {
 
     bar.current.style.width = indicatorMult + '%'
 
-    console.log('bar.current.style.width :', bar.current.style.width)
-
-        bar.current.style.backgroundColor = backgroundColor
+    bar.current.style.backgroundColor = backgroundColor
     requestAnimationFrame(loop);
   }
 
@@ -51,10 +51,7 @@ function loop() {
 
     return (
         <>
-            <div className={'scroll-indicator'}>
-                <div ref={bar} className={'bar'}>
-                </div>
-            </div>
+        <div ref={bar} className={'bar'} />
         </>
     )
 }

@@ -8,16 +8,17 @@
 }
 
 .timelineButtons {
-    width:90%;
+    width:80%;
     margin-top:10%;
+    margin-bottom:5%;
     display:flex;
     flex-direction:row;
     justify-content: space-evenly;
 }
 
 .timeline {
-    width:80%;
-    height:70%;
+    width:90%;
+    height:100%;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
@@ -71,13 +72,13 @@
     margin-bottom:5%;
 }
 
-.timelineText > h2 {
+.timelineDate {
     color: $red;
     font-size:$mobileMediumFont;
     letter-spacing:5px;
 }
 
-.timelineText > h3 {
+.timelineTitle {
     font-size:$mobileSmallFont;
     color:$white;
 }
@@ -87,9 +88,44 @@
     font-size:$mobileVerySmallFont;
 }
 
+@media screen and (orientation:landscape) {
+
+    .timelineDate {
+        letter-spacing: 1px;
+    }
+    
+    .work {
+        height:150vh;
+    }
+
+    .timeline {
+        height:80vh;
+    }
+    
+    .timelineButtons {
+        margin-top:5%;
+        margin-bottom:2%;
+    }
+
+    .timelineText {
+        font-size:$mobileSmallFont;
+        letter-spacing:0px;
+    }
+}
+
 @media screen and (max-width: 361px) {
     .timelineText > h2{
-        letter-spacing: 0px;;
+        letter-spacing: 0px;
         font-size:$mobileVerySmallFont;
+    }
+}
+
+@media screen and (min-width: $minWidthLandScapeTablette ) {
+    .work > h1 {
+        font-size:$tabletH1;
+    }
+
+    .timelineText {
+        font-size:$tabletMediumFont;
     }
 }

@@ -1,4 +1,5 @@
-
+@import './import/breakpoint';
+@import './import/keyframes';
 @import './import/colors';
 @import './import/font';
 @import './import/mixin';
@@ -25,7 +26,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height:100vh !important;
   overflow:auto;
+  height:100vh;
+  width:100vw;
+  overflow-x:hidden !important;
   scroll-behavior: smooth;
+}
+
+span {
+  font-family: $defaultFontFamily;
 }
 
 
@@ -95,4 +103,12 @@ h1 {
 
 h2 {
   color:$white;
+}
+
+canvas {
+  z-index:0;
+  width: 100%;
+  height: 100%;
+  background: $defaultColor;
+  position: absolute;
 }

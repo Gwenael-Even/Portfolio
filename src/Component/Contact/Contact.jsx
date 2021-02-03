@@ -19,7 +19,6 @@ function Contact () {
                 {errors.name && errors.name.type === "required" && <span>Ce champ est requis</span>}
                 {errors.name && errors.name.type === "minLength" && <span>Votre nom est trop long</span> }
                 {console.log('name.errors', errors.name)}
-            <div className='requirements'>Champ requis</div>
         </div>
         <div>
             <label htmlFor={'mail'}>Votre mail</label>
@@ -28,10 +27,8 @@ function Contact () {
         <div>
             <label htmlFor={'message'}>Votre message</label>
             <textarea name='message' key='message' placeholder=" " required ref={register({required: true, minLength:10, maxLength:1000})} />
-            <div className='requirements'>Champ requis</div>
         </div>
         <input type='submit' className={'btn'} value="Envoyer" />
-        <div className='requirements'>Champ requis</div>
     </form>
     </>
     )
