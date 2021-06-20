@@ -1,0 +1,124 @@
+
+.projectShow {
+    position:relative;
+    top:0%;
+    right:0;
+    width:100vw;
+    min-height:30vh;
+    z-index:-1;
+    background-color:$darkBlue;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+}
+
+.projectOpened {
+    position:absolute;
+    top:0%;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2;
+    transition:transform 1s ease;
+    transform:translateY(0);
+    width:100vw;
+    min-height:30vh;
+    opacity:1 !important;
+    border-bottom:1px solid black;
+}
+
+.projectClosed {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transition:transform 1s ease;
+    transform:translateY(100%);
+}
+
+.slider {
+    position:fixed;
+    top:0;
+    right:0;
+    width:100vw;
+    min-height:30vh;
+    transition:transform 1s ease-in;
+}
+
+
+.arrowClose {
+    position:absolute;
+    display:flex;
+    justify-content: flex-end;
+    z-index:3;
+    top:5px;
+    right:10px;
+   
+    > a > svg {
+        fill:black;
+        width:50px;
+        height:50px;
+        transition:transform 0.3s ease-in;
+        
+        &:hover {
+            transform:translateX(-10px);
+        }
+    }
+}
+
+.projectContainer {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+}
+      
+ .contentProjectTitle  {
+    text-align:center;
+    background-color: white;
+    padding:10px;
+    width: 100%;
+    border-radius:3px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+    > * {
+    color:black;
+    }
+}
+
+.projectDescription {
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+@media screen and (orientation:landscape) {
+    .projectShow, .projectClosed {
+        top:-100%;
+    }
+
+}
+
+@media screen and (min-width: $minWidthTablet ) {
+    .projectDescription {
+        font-size:$mobileMediumFont;
+    }
+}
+
+@media screen and (min-width: $minWidthLandScapeTablette ) {
+
+    .arrowClose > a > svg {
+        width:75px;
+        height:75px;
+    }
+
+    .contentProjectTitle {
+        font-size:$mobileBigFont;
+    }
+    .projectDescription {
+        font-size:$mobileBigFont;
+    }
+}
+
+@media screen and (min-width: $minWidthLaptop) {
+    .projectShow, .projectClosed {
+    }
+}

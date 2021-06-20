@@ -111,10 +111,37 @@ button {
   }
 }
 
+.btn.btnGithub {
+  width:50px;
+  height:25px;
+  background-color:white;
+  color:black;
+  border: 1px solid white;
+  border-radius:6px;
+  font-size:$mobileVerySmallFont;
+  margin-top:10%;
+  &:before, &:hover {
+    background-color: black;
+    color:white;
+    border:none;
+  }
+}
+
+@media screen and (orientation:landscape) {
+
+}
+
 @media screen and (min-width: $minWidthTablet ) {
   .btn.btnProject {
     width:142px;
     height:37px;
+  }
+
+  .btn.btnGithub {
+    width:142px;
+    height:37px;
+    font-size:$mobileMediumFont;
+    margin-top:2%;
   }
 }
 
@@ -135,6 +162,14 @@ button {
     height:90px;
     font-size:$tabletMediumFont;
     line-height:90px;
+  }
+
+  
+  .btn.btnGithub {
+    width:175px;
+    height:45px;
+    font-size:$tabletMediumFont;
+    margin-top:2%;
   }
 }
 
