@@ -16,7 +16,6 @@ function About () {
 
             if (bottomPosition < scrollPosition) {
                 doShow(state => ({ ...state, itemOne: true}))
-                console.log('true')
             }
         }
     
